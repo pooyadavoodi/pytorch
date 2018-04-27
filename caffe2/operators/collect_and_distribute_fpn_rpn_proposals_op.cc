@@ -236,6 +236,8 @@ REGISTER_MKL_OPERATOR(
     mkl::MKLFallbackOp<CollectAndDistributeFpnRpnProposalsOp<CPUContext>>);
 #endif // CAFFE2_HAS_MKL_DNN
 
+} // namespace
+
 OPERATOR_SCHEMA(CollectAndDistributeFpnRpnProposals)
     .NumInputs(2, INT_MAX)
     .NumOutputs(3, INT_MAX)
@@ -348,5 +350,4 @@ will change.
 
 SHOULD_NOT_DO_GRADIENT(CollectAndDistributeFpnRpnProposals);
 
-} // namespace
 } // namespace caffe2

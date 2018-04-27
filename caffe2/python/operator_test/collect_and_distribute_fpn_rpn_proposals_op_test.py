@@ -137,7 +137,7 @@ class TestCollectAndDistributeFpnRpnProposals(hu.HypothesisTestCase):
            rpn_post_nms_topN=st.integers(min_value=1000, max_value=4000),
            roi_canonical_scale=st.integers(min_value=100, max_value=300),
            roi_canonical_level=st.integers(min_value=1, max_value=8),
-           **hu.gcs_cpu_only)
+           **hu.gcs)
     def test_collect_and_dist(
         self,
         proposal_count,
